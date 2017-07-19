@@ -20,7 +20,12 @@ exports.arraysAnswers = {
   },
 
   remove: function(arr, item) {
-
+    for (var i = 0; i < arr.length; i++) {
+      if (arr.length > 0 && arr[i] === item) {
+        arr.splice(i, 1);
+        i -= 1;
+      };
+    };
   },
 
   removeWithoutCopy: function(arr, item) {
