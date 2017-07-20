@@ -46,19 +46,35 @@ exports.arraysAnswers = {
   },
 
   truncate: function(arr) {
-    arr.pop();
+    var answer = [];
+    for (var i = 0; i < arr.length -1; i++) {
+      answer[i] = arr[i];
+    };
+    return answer;
   },
 
   prepend: function(arr, item) {
-    arr.unshift(item);
+    var answer = [item];
+    for (var i = 0; i < arr.length; i++) {
+      answer[i + 1] = arr[i];
+    };
+    return answer;
   },
 
   curtail: function(arr) {
-
+    var answer = [];
+    for (var i = 1; i < arr.length; i++) {
+      answer[i - 1] = arr[i];
+    };
+    return answer;
   },
 
   concat: function(arr1, arr2) {
-
+    n = arr1.length;
+    for (var i = 0; i < arr2.length; i++) {
+      arr1[n + i] = arr2[i];
+    };
+    return arr1;
   },
 
   insert: function(arr, item, index) {
