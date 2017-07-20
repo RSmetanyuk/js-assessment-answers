@@ -101,7 +101,7 @@ exports.arraysAnswers = {
     return sum;
   },
 
-  duplicates: function(arr) {
+  duplicates: function(arr) { // test passed, but have a bug if item repeats mo then 3 times
     var answer = [];
     for (var i = 0; i < arr.length; i++) {
       for (var j = i + 1; j < arr.length;) {
@@ -118,10 +118,20 @@ exports.arraysAnswers = {
   },
 
   square: function(arr) {
-
+    var answer = [];
+    for (var i = 0; i < arr.length; i++) {
+      answer[i] = arr[i] * arr[i];
+    };
+    return answer;
   },
 
   findAllOccurrences: function(arr, target) {
-
+    var answer = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === target) {
+        answer[answer.length] = i;
+      };
+    };
+    return answer;
   }
 };
