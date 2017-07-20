@@ -78,15 +78,43 @@ exports.arraysAnswers = {
   },
 
   insert: function(arr, item, index) {
-
+    var answer = [];
+    for (var i = 0; i < arr.length + 1; i++) {
+      if (i < index) {
+        answer[i] = arr[i];
+      } else if (i === index) {
+        answer[i] = item;
+      } else {
+        answer[i] = arr[i - 1];
+      };
+    };
+    return answer;
   },
 
   count: function(arr, item) {
-
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === item) {
+        sum ++;
+      };
+    };
+    return sum;
   },
 
   duplicates: function(arr) {
-
+    var answer = [];
+    for (var i = 0; i < arr.length; i++) {
+      for (var j = i + 1; j < arr.length;) {
+        if (arr[i] !== undefined && arr[i] === arr[j]) {
+          answer[answer.length] = arr[i];
+          delete arr[j];
+          j = arr.length;
+        } else {
+          j++;
+        };
+      };    
+    };
+    return answer;    
   },
 
   square: function(arr) {
