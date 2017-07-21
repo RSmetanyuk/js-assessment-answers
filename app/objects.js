@@ -2,7 +2,9 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.objectsAnswers = {
   alterContext: function(fn, obj) {
-
+  	name = obj.name;
+  	greeting = obj.greeting;
+  	fn();
   },
 
   alterObjects: function(constructor, greeting) {
