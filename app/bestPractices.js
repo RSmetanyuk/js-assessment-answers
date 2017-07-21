@@ -17,7 +17,17 @@ exports.bestPracticesAnswers = {
   },
 
   parseInt: function(num) {
-    return parseInt(num);
+    var newString = "";
+    num = num.toString();
+
+    for (var i=0; i < num.length; i++) {
+      if(num.charAt(i) >= 0) {
+        newString += num.charAt(i);
+      } else {
+        break;
+      }
+    }
+    return +newString;
   },
 
   identity: function(val1, val2) {
