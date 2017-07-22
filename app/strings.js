@@ -10,6 +10,8 @@ exports.stringsAnswers = {
   },
 
   reverseString: function(str) {
-
+  	str = str.split("");
+  	str.reverse();
+  	return str.join("");
   }
 };
