@@ -60,7 +60,15 @@ exports.regexAnswers = {
   },
 
   matchesPattern: function(str) {
-
+    var answer = false;
+    if (str.length === 12) {
+      if (str.charAt(3) === "-" && str.charAt(7) === "-") {
+        if(!isNaN(str.slice(0, 3)) && !isNaN(str.slice(4, 7)) && !isNaN(str.slice(8))) {
+          answer = true;
+        };
+      };
+    };
+    return answer;
   },
 
   isUSD: function(str) {
