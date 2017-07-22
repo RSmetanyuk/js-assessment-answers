@@ -5,7 +5,7 @@ exports.recursionAnswers = {
 
   },
 
-  permute: function(arr) {
+  permute: function(arr) { // NOT PASSED
   	var answer = [];
   	for (var i=0; i<arr.length; i++) {
   		answer[i] = arr[arr.length-1-i];
