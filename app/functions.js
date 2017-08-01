@@ -37,7 +37,17 @@ exports.functionsAnswers = {
   },
 
   partialUsingArguments: function(fn) {
-
+    var args = arguments, curryArgs = [];
+ 
+    for (var i = 1; i < args.length; i++) {
+    curryArgs[i - 1] = args[i];
+    }
+ 
+    return function () {
+    var argsArr = Array.prototype.slice.call(arguments, 0);    
+    curryArgs = curryArgs.concat(argsArr);
+    return fn.apply(this, curryArgs);
+    }
   },
 
   curryIt: function(fn) {
