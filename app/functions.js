@@ -25,7 +25,11 @@ exports.functionsAnswers = {
   },
 
   useArguments: function() {
-
+    var answer = 0;
+    for (var i=0; i<arguments.length; i++) {
+      answer += arguments[i]
+    };
+    return answer
   },
 
   callIt: function(fn) {
