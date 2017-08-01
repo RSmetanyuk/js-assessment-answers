@@ -22,6 +22,7 @@ exports.functionsAnswers = {
 
   partial: function(fn, str1, str2) {
     return function (x) {return fn(str1, str2, x)};
+    // return fn.bind(null, str1, str2) // alternative passed code
   },
 
   useArguments: function() {
