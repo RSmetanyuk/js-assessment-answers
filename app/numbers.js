@@ -2,7 +2,8 @@ exports = typeof window === 'undefined' ? global : window;
 
 exports.numbersAnswers = {
   valueAtBit: function(num, bit) {
-
+    var bin = num.toString(2);
+    return + bin.charAt(bin.length - bit)
   },
 
   base10: function(str) {
@@ -10,7 +11,7 @@ exports.numbersAnswers = {
   },
 
   convertToBinary: function(num) {
-
+    return num.toString(2);
   },
 
   multiply: function(a, b) {

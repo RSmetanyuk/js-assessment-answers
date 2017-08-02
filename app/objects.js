@@ -1,7 +1,7 @@
 exports = typeof window === 'undefined' ? global : window;
 
-exports.objectsAnswers = {
-  alterContext: function(fn, obj) {
+exports.objectsAnswers = { 
+  alterContext: function(fn, obj) {		//not passed
   	name = obj.name;
   	greeting = obj.greeting;
   	fn();
