@@ -10,7 +10,7 @@ exports.numbersAnswers = {
   	return parseInt(str, 2)
   },
 
-  convertToBinary: function(num) {
+  convertToBinary: function(num) {  //not passed
     return num.toString(2);
   },
 
