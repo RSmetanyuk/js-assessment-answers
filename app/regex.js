@@ -14,7 +14,8 @@ exports.regexAnswers = {
   },
 
   captureThreeNumbers: function(str) {
-    return /012|123|234|345|456|567|678|789|987|876|765|654|543|432|321|210/.exec(str)[0];  // NOT PASSED!!!
+    var re = /012|123|234|345|456|567|678|789|987|876|765|654|543|432|321|210/g
+    return re.exec(str);  // NOT PASSED!!!
   },
 
   matchesPattern: function(str) {

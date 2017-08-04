@@ -6,11 +6,21 @@ exports.recursionAnswers = {
   },
 
   permute: function(arr) { // NOT PASSED
-  	var answer = [];
-  	for (var i=0; i<arr.length; i++) {
-  		answer[i] = arr[arr.length-1-i];
-  	}
-  	return answer;
+    var permArr = [],
+        usedChars = [];
+    return (function main() {
+        for (var i = 0; i < arr.length; i++) {
+            var ch = arr.splice(i, 1)[0];
+            usedChars.push(ch);
+            if (arr.length == 0) {
+                permArr.push(usedChars.slice());
+            }
+            main();
+            arr.splice(i, 0, ch);
+            usedChars.pop();
+        }
+        return permArr;
+    })();
   },
 
   fibonacci: function(n) {
