@@ -5,7 +5,7 @@ exports.recursionAnswers = {
 
   },
 
-  permute: function(arr) { // NOT PASSED
+  permute: function(arr) {
     var permArr = [],
         usedChars = [];
     return (function main() {
@@ -24,14 +24,29 @@ exports.recursionAnswers = {
   },
 
   fibonacci: function(n) {
-  	var arrFibonacci = [0, 1];
-  	for (var i=2; i<=n; i++) {
-  		arrFibonacci[i] = arrFibonacci[i-1] + arrFibonacci[i-2];
-  	}
-  	return arrFibonacci[n]
+    if (n === 0) {     
+      return 0;
+    } else if (n === 1) {
+      return 1;
+    };
+    return exports.recursionAnswers.fibonacci(n-1) + exports.recursionAnswers.fibonacci(n-2);
   },
 
   validParentheses: function(n) {
+    if (n == 0)
+        return [""];
 
+    var result = [];
+    for (var i = 0; i < n; ++i) {
+
+        var lefts = exports.recursionAnswers.validParentheses(i);
+        var rights = exports.recursionAnswers.validParentheses(n - i - 1);
+
+        for (var l = 0; l < lefts.length; ++l)
+            for (var r = 0; r < rights.length; ++r)
+                result.push("(" + lefts[l] + ")" + rights[r]);
+    }
+
+    return result;
   }
 };
