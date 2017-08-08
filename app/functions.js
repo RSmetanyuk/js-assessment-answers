@@ -52,12 +52,6 @@ exports.functionsAnswers = {
   },
 
   curryIt: function(fn) {
-    var args = Array(fn.length), n = 0;
-    return function fn_curried(){
-    for(var i=0; i<arguments.length; ++i) args[i + n] = arguments[i];
-    n += arguments.length;
-    return n >= fn.length ? fn.apply(null, args) : fn_curried();
 
-    }
   }
 };

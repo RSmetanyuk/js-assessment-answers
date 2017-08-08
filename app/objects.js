@@ -1,18 +1,19 @@
 exports = typeof window === 'undefined' ? global : window;
 
 exports.objectsAnswers = { 
-  alterContext: function(fn, obj) {		//not passed
+  alterContext: function(fn, obj) {
   	return fn.call(obj)
-  	/*name = obj.name;
-  	greeting = obj.greeting;
-  	fn();*/
   },
 
   alterObjects: function(constructor, greeting) {
-
+    constructor.greeting = greeting
   },
 
-  iterate: function(obj) {
-
+  iterate: function(obj) {    // NOT PASSED
+    var answer = [];
+    for (i in obj) {
+      answer.push(i + ': ' + obj[i]);
+    }
+    return answer;
   }
 };
