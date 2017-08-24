@@ -6,13 +6,15 @@ exports.objectsAnswers = {
   },
 
   alterObjects: function(constructor, greeting) {
-    constructor.greeting = greeting
+    constructor.prototype.greeting = greeting
   },
 
-  iterate: function(obj) {    // NOT PASSED
+  iterate: function(obj) {
     var answer = [];
     for (i in obj) {
-      answer.push(i + ': ' + obj[i]);
+      if (obj.hasOwnProperty(i)) {
+        answer.push(i + ': ' + obj[i])
+      }
     }
     return answer;
   }
