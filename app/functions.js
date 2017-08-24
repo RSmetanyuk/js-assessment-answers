@@ -14,10 +14,11 @@ exports.functionsAnswers = {
   },
 
   makeClosures: function(arr, fn) {     //not passed
-    for (var i=0; i<arr.length; i++) {
-      arr[i]=fn(arr[i]);
-    }
-    return arr
+    var answer = [];
+    for (var i = 0; i < arr.length; i++) {
+      answer.push(function() {return fn(arr[i])});
+    };
+    return answer
   },
 
   partial: function(fn, str1, str2) {
@@ -34,7 +35,9 @@ exports.functionsAnswers = {
   },
 
   callIt: function(fn) {
-
+    var args = [].slice.call(arguments);
+    args.shift()
+    return fn.apply(null, args)
   },
 
   partialUsingArguments: function(fn) {
