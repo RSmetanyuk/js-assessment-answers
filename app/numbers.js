@@ -10,8 +10,10 @@ exports.numbersAnswers = {
   	return parseInt(str, 2)
   },
 
-  convertToBinary: function(num) {  //not passed
-    return num.toString(2);
+  convertToBinary: function(num) {
+    var answer = num.toString(2);  
+    while (answer.length < 8) {answer = "0" + answer};
+    return answer
   },
 
   multiply: function(a, b) {
