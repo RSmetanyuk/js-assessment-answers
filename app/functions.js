@@ -16,7 +16,9 @@ exports.functionsAnswers = {
   makeClosures: function(arr, fn) {     //not passed
     var answer = [];
     for (var i = 0; i < arr.length; i++) {
-      answer.push(function() {return fn(arr[i])});
+      (function(n) {
+        answer.push(function() {return fn(arr[n])});
+      })(i)
     };
     return answer
   },
