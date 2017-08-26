@@ -1,16 +1,16 @@
 Answers to https://github.com/rmurphey/js-assessment 
 
-How to run: 
-	npm install 
-	npm start
+# How to run:
+ 
+npm install
+ 
+npm start
 
 You can then view the tests in your browser at http://localhost:4444
 
-PASSED TESTS:
+# PASSED TESTS:
 
-	
 arrays
-
 
   you should be able to determine the location of an item in an array
   you should be able to sum the items of an array
