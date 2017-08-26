@@ -8,8 +8,12 @@ How to run:
 
 You can then view the tests in your browser at http://localhost:4444
 
-PASSED TESTS: 
-arrays 
+PASSED TESTS:
+
+
+arrays
+
+
   you should be able to determine the location of an item in an array
   you should be able to sum the items of an array
   you should be able to remove all instances of a value from an array
