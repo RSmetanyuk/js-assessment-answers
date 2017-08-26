@@ -13,7 +13,7 @@ exports.functionsAnswers = {
     return function(x) {return str + ", " + x}
   },
 
-  makeClosures: function(arr, fn) {     //not passed
+  makeClosures: function(arr, fn) {
     var answer = [];
     for (var i = 0; i < arr.length; i++) {
       (function(n) {
@@ -57,6 +57,11 @@ exports.functionsAnswers = {
   },
 
   curryIt: function(fn) {
+    var args = [];
+    return function fn_curried(x){
+      for (var i = 0; i < arguments.length; i++) args.push(arguments[i]);
+      return args.length >= fn.length ? fn.apply(null, args) : fn_curried;
+    };
+  },
 
-  }
 };
