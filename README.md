@@ -1,18 +1,14 @@
-Answers to https://github.com/rmurphey/js-assessment 
+**Answers to** https://github.com/rmurphey/js-assessment 
 
-# How to run:
- 
-npm install
- 
-npm start
+### How to run: 
+* npm install 
+* npm start
 
-You can then view the tests in your browser at http://localhost:4444
+**You can then view the tests in your browser at**  http://localhost:4444
 
-# PASSED TESTS:
-
-arrays
-
-  you should be able to determine the location of an item in an array
+### Passed tests:
+* arrays
+  * you should be able to determine the location of an item in an array
   you should be able to sum the items of an array
   you should be able to remove all instances of a value from an array
   you should be able to remove all instances of a value from an array, returning the original array
@@ -81,7 +77,7 @@ strings
   you should be able to reverse a string
 
 
-NOT PASSED TESTS:
+### Not passed tests:
 async behavior
   you should understand how to use promises to handle asynchronicity
   you should be able to retrieve data from the server and return a sorted array of names
