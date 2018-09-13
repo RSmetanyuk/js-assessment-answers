@@ -8,7 +8,7 @@ exports.arraysAnswers = {
         break;
       };
     };
-    return -1;
+    //return -1;
   },
 
   sum: function(arr) {
